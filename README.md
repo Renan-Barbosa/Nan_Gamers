@@ -10,7 +10,8 @@ Iremos desenvolver tudo que aprendemos nas ultimas UCS no nosso projeto desenvol
 * HTML
 * CSS
 
-# Time de desenvolvedores
-* Renan Barbosa
+# Time de desenvolvedores 👨🏿‍💻
+* Renan Barbosa.
 
 # Objetivo do software  
+Cadastro de clientes e vendas de produtos.
