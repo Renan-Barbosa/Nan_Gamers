@@ -15,6 +15,10 @@ Iremos desenvolver tudo que aprendemos nas ultimas UCS no nosso projeto desenvol
 
 # Objetivo do software  
 
-Cadastro de clientes e vendas de produtos.
+Vender produtos online.
 
 # Funcionalidades do sistema
+* Cadastrar Clientes
+* Acesso do cliente a conteúdos exclusivos
+* Formas de pagamentos
+* Cupons de descontos para cliente premium
