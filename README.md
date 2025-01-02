@@ -14,4 +14,7 @@ Iremos desenvolver tudo que aprendemos nas ultimas UCS no nosso projeto desenvol
 * Renan Barbosa.
 
 # Objetivo do software  
+
 Cadastro de clientes e vendas de produtos.
+
+# Funcionalidades do sistema
