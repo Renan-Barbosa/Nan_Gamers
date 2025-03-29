@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #0000FF, #7fd699);
+    height: 100vh;
+    margin: 0px;
+}
+
+
+ .card{
+   position: relative;
+   max-width: 640px;
+   max-height: 640px;
+margin-top: 2cm;
+margin-left: 1cm;
+margin-right: 3cm;
+border: transparent;
+text-align: center;
+
+}
