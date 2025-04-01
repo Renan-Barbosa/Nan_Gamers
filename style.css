@@ -22,3 +22,17 @@ border: transparent;
 text-align: center;
 
 }
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h2.Cadastrar{
+    position: relative;
+    left: 2cm;
+    top: cm;
+}
+h2.enviar{
+    position: relative;
+    left: 2cm;
+    top: 0px;
+}
