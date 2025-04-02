@@ -26,13 +26,19 @@ h2{
     font-family: Arial, Helvetica, sans-serif;
 
 }
-h2.Cadastrar{
-    position: relative;
-    left: 2cm;
-    top: cm;
+h2{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    letter-spacing: 0px;
+    
 }
-h2.enviar{
-    position: relative;
-    left: 2cm;
-    top: 0px;
+
+label{
+    font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0px;
 }
