@@ -16,33 +16,27 @@
 </head>
 
 <body>
-    <header class="header-bg text-center py-4">
-        <h1>Cadastre em nossa loja <h1>
-                <h5>Preencha os campos necessários</h5>
-    </header>
-    <div class="container ">
-       <div class="row g-2">
-         <div class="col-6">
-          <div class="p-3">
-            <div class="mb-3">
-               <label for="card " class="for-label">Produto   </label>
-        <div class="input-group">
-            <input type="text" id="cardNumber" class="form-control" required
-                placeholder="nome do produto">
-            <div class="input-group-text">
-                <img src="..." alt="produto" id="ProdutoIcon" style="height: 20px;  display: none;">
-                
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
+    <table class="table table-bordered table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Valor Total</th>
+            </tr>
+        </thead>
 </body>
-
+<tbody id="TabelaProdutos">
+    <td></td>         
+    <td></td>         
+    <td></td>         
+    <td>
+        <div class="qty"></div>
+        <button>-</button>
+        <span>2</span>
+        <button>+</button>
+    </td>         
+    <td></td>         
+</tbody>
 </html>
