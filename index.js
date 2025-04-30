@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (){
-const btnComprar= document.getSelection("btnComprar");
+const btnComprarProduto= document.getElementById("btnComprar");
 const btnCadastrarDados= document.getElementById("btnCadastrar");
 let email= document.getElementById("Email");
 let senha= document.getElementById("Senha");
@@ -15,8 +15,10 @@ btnCadastrarDados.addEventListener('click', () =>{
       }
     
   });
-  btnComprar.addEventListener('click', () =>{
-    mostrarMensagem("Compra adicionado ao carrinho!")
+  btnComprarProduto.addEventListener("click", () => {
+
+    
+    mostrarMensagem("Compra adicionado ao carrinho!");
   })
 
 
