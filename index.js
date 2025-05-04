@@ -5,6 +5,7 @@ let email= document.getElementById("Email");
 let senha= document.getElementById("Senha");
 
 
+
 btnCadastrarDados.addEventListener('click', () =>{
    
     if(email.value == '' && senha.value == ''){
@@ -15,13 +16,8 @@ btnCadastrarDados.addEventListener('click', () =>{
       }
     
   });
-  btnComprarProduto.addEventListener("click", () => {
-
-    
-    mostrarMensagem("Compra adicionado ao carrinho!");
-  })
-
-
+  
+  
 
 
   function mostrarMensagem(texto){
