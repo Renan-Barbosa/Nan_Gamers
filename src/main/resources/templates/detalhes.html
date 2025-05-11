@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biblioteca Virtual</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/}+${css}+'.css'" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <center>
+            <a href="/">Página Inicial</a>
+            <a href="/livro/cadastro">Cadastrar novo livro</a>
+            <a href="/livro/lista">Exibir todos os livros cadastrados</a>
+            
+            <h1>Detalhes do livro</h1>
+            
+        </center>
+    
+    <p>ID: <span th:text="${cliente.id}"></p>
+    <p>Nome do Cliente: <span th:text="${cliente.nome_cliente}"></p>
+     <p>E-mail: <span th:text="${cliente.email}"></p>
+     <p>Senha: <span th:text="${cliente.senha}"></p>
+     <p>CPF: <span th:text="${cliente.cpf}"></p>
+     <p>RG: <span th:text="${cliente.rg}"></p>
+    
+    <h2>Comentários</h2>
+    <form th:action="@{'/vendas/gravar/' + ${cliente.id}}" method="post">
+        <p>
+            <label>Nome do cliente:</label>
+            <input type="text" id="nome_cliente" name="nome_cliente" required>
+        </p>
+        <p>
+        <label>Produto:</label>
+        <input type="text" id="produtos" name="produtos" required>
+        </p>
+         <p>
+        <label>Preço:</label>
+        <input type="number" id="preço" name="preço" required>
+        </p>
+          <p>
+        <label>Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" required>
+        </p>
+          <p>
+        <label>Valor Total:</label>
+        <input type="number" id="valor_total" name="valor_total" required>
+        </p>
+        <button type="submit">Adicionar</button>
+    </form>
+    
+    <ul>
+        <li th:each="Vendas : ${vendas}">
+            Comentário: <span th:text="${comentario.texto}"></span><br>
+            Nota: <span th:text="${comentario.nota}"></span>
+            <a th:href="@{'/comentario/excluir/'} + ${comentario.id}">Excluir</a>
+        </li>
+    </ul>
+    
+    </body>
+</html>
