@@ -14,9 +14,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <center>
            <a href="/">Pagina Incial</a>
-        <a href="/cadastro">Cadastrar um novo cliente</a>
-        <a href="/detalhes">Cadastrar uma nova venda</a> 
-        <a href="/listar">Exibir todos os clientes cadastrados</a>
+        <a href="/cliente/cadastro">Cadastrar um novo cliente</a>
+        <a href="/cliente/detalhes">Cadastrar uma nova venda</a> 
+        <a href="/cliente/listar">Exibir todos os clientes cadastrados</a>
         
             
             <h1>Cadastro de filme</h1>
@@ -24,22 +24,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <table>
             <thead>
                 <th>ID</th>
-                <th>Nome do Cliente</th>
-                <th>cpf</th>
-                <th>rg</th>
+                <th>Cliente</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>CPF</th>
+                <th>RG</th>
                 
             </thead>
             
             <tbody>
-                <tr th:each="cliente: ${clientes}">
+                <tr th:each="cliente:${clientes}">
                     <td th:text="${cliente.id}"></td>
                     <td th:text="${cliente.nome_cliente}"></td>
                      <td th:text="${cliente.Email}"></td>
                       <td th:text="${cliente.senha}"></td>
-                    <td th:text="${cliente.cpf}}"></td>
+                    <td th:text="${cliente.cpf}"></td>
                     <td th:text="${cliente.rg}"></td>
                     <td>
-                        <a th:href="@{'/cliente/vendas/'} + ${cliente.id}">+ Detalhes</a>
+                        <a th:href="@{'/cliente/detalhes/'} + ${cliente.id}">+ Detalhes</a>
                         <a th:href="@{'/cliente/alterar/'} + ${cliente.id}">Alterar</a>
                         <a th:href="@{'/cliente/excluir/'} + ${cliente.id}">Excluir</a>
                     </td>

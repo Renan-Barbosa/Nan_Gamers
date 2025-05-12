@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-
+@RequestMapping("/vendas")
 public class VendasController {
     @Autowired
     private ClienteService clienteService;
@@ -23,18 +24,18 @@ public class VendasController {
     
     
     @PostMapping("/gravar/{clienteId}")
-    public String adicionarVenda(@PathVariable int ClienteId, @ModelAttribute Vendas novaVenda) {
-        Cliente cliente = clienteService.buscarPorId(ClienteId);
+    public String adicionarVenda(@PathVariable int clienteId, @ModelAttribute Vendas novaVendas) {
+        Cliente cliente = clienteService.buscarPorId(clienteId);
         if (cliente != null) {
-            cliente.adicionarVenda(novaVenda);
+            cliente.adicionarVenda(novaVendas);
             clienteService.salvar(cliente);
         }
-        return "redirect:/detalhes/" + ClienteId;
+        return "redirect:/cliente/detalhes/" + clienteId;
     }
     
-   /* @GetMapping("/excluir/{id}")
+   @GetMapping("/excluir/{id}")
     public String excluir(@PathVariable int id) {
         vendasService.excluir(id);
-        return "redirect:/listar";
-    }*/
+        return "redirect:/cliente/listar";
+    }
 }

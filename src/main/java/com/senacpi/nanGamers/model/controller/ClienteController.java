@@ -11,11 +11,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
+@RequestMapping("/cliente")
 
 public class ClienteController {
+     @Autowired
      private ClienteService clienteService;
    
     @Autowired
@@ -34,9 +37,9 @@ public class ClienteController {
     }
     
     @PostMapping("/gravar")
-    public String processarFormulario(@ModelAttribute Cliente cliente) {
+    public String processarFormularioCLiente(@ModelAttribute Cliente cliente) {
         clienteService.salvar(cliente);
-        return "redirect:/listar";
+        return "redirect:/cliente/listar";
     }
     
     @GetMapping("/listar")
@@ -54,7 +57,7 @@ public class ClienteController {
     @GetMapping("/excluir/{id}")
     public String excluir(@PathVariable int id) {
         clienteService.excluir(id);
-        return "redirect:/listar";
+        return "redirect:/cliente/listar";
     }
     
     @GetMapping("/detalhes/{id}")
@@ -62,7 +65,7 @@ public class ClienteController {
         Cliente cliente = clienteService.buscarPorId(id);
         
         model.addAttribute("cliente", cliente);
-        model.addAttribute("vendas", vendasService.listarPorCliente(id));
+        model.addAttribute("vendass", vendasService.listarPorCliente(id));
         return "detalhes";
     }
 }

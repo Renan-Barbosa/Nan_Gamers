@@ -22,7 +22,7 @@ public class Vendas {
     
     private String nome_cliente;
     private String produtos;
-    private int preço;
+    private int preco;
     private int quantidade;
     private int valor_total;
     

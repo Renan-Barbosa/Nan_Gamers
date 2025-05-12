@@ -35,7 +35,7 @@
         </p>
          <p>
         <label>Preço:</label>
-        <input type="number" id="preço" name="preço" required>
+        <input type="number" id="preco" name="preco" required>
         </p>
           <p>
         <label>Quantidade:</label>
@@ -49,10 +49,13 @@
     </form>
     
     <ul>
-        <li th:each="Vendas : ${vendas}">
-            Comentário: <span th:text="${comentario.texto}"></span><br>
-            Nota: <span th:text="${comentario.nota}"></span>
-            <a th:href="@{'/comentario/excluir/'} + ${comentario.id}">Excluir</a>
+        <li th:each="vendas : ${vendass}">
+            Nome do Cliente: <span th:text="${vendas.nome_cliente}"></span><br>
+            Produto <span th:text="${vendas.produtos}"></span><br>
+           Preço: <span th:text="${vendas.preco}"></span><br>
+            Quantidade: <span th:text="${vendas.quantidade}"></span><br>
+            Valor Total: <span th:text="${vendas.valor_total}"></span><br>
+            <a th:href="@{'/vendas/excluir/'} + ${vendas.id}">Excluir</a>
         </li>
     </ul>
     
